@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "585506876126",
+    "project_id": "evoting-d0a2f",
+    "storage_bucket": "evoting-d0a2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585506876126:android:287fa7d860c5240039f04f",
+        "android_client_info": {
+          "package_name": "com.example.evoting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585506876126-a43vl2m0n709kbc13pup0kpq2hhg3prn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtW7Uy4iPsc-1tBIcLSFgMGy7c6p5OVY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585506876126-a43vl2m0n709kbc13pup0kpq2hhg3prn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
