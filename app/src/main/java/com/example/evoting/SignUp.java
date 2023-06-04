@@ -46,6 +46,7 @@ public class SignUp extends AppCompatActivity {
         finish();
     }
 
+
     public void CitizenSignUp(View view) {
         UserModel userModel=new UserModel(email.getText().toString(),password.getText().toString(),Integer.parseInt(age.getText().toString()),Long.parseLong(cnic.getText().toString()));
         if(Integer.parseInt(age.getText().toString())<18)
