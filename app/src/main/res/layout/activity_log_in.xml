@@ -20,10 +20,10 @@
         app:lottie_rawRes="@raw/login" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailSignUp"
+        android:id="@+id/emailLogIn"
         android:layout_width="355dp"
         android:layout_height="55dp"
-        android:hint="Email"
+        android:hint="CNIC"
         android:layout_marginTop="30dp"
         android:outlineAmbientShadowColor="#0857A0"
         app:boxCornerRadiusBottomEnd="5dp"
@@ -43,16 +43,17 @@
         app:startIconTint="#0857A0">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailLogIn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             app:boxStrokeColor="#0857A0"
             app:boxStrokeWidth="2dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordSignUp"
+        android:id="@+id/passwordLogIn"
         android:layout_width="355dp"
         android:layout_height="55dp"
         android:hint="Password"
@@ -67,15 +68,16 @@
         app:boxStrokeErrorColor="#FF0000"
         app:boxStrokeWidth="2dp"
         app:hintTextColor="#0857A0"
-        app:layout_constraintEnd_toEndOf="@+id/emailSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/emailLogIn"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/emailSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/emailSignUp"
+        app:layout_constraintStart_toStartOf="@+id/emailLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/emailLogIn"
         app:startIconDrawable="@drawable/baseline_key_24"
         app:startIconTint="#0857A0"
         >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordLogIn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -98,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogIn"
         app:layout_constraintVertical_bias="0.268" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -110,6 +112,7 @@
         android:contentDescription="Log In"
         android:fontFamily="@font/droid_sans"
         android:pointerIcon="hand"
+        android:onClick="CitizenLogIn"
         android:text="Log In"
         android:textColor="@color/white"
         android:textSize="18dp"
@@ -117,10 +120,10 @@
         app:icon="@drawable/baseline_login_24"
         app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/passwordSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLogIn"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/passwordSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/passwordSignUp"
+        app:layout_constraintStart_toStartOf="@+id/passwordLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogIn"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView

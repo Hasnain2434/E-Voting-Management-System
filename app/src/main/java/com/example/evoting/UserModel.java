@@ -4,13 +4,34 @@ public class UserModel {
     String email;
     String password;
     int age;
-    long cnic;
+    String cnic;
 
-    public UserModel(String email, String password, int age, long cnic) {
+    String vote;
+    String casted;
+
+    public String getCasted() {
+        return casted;
+    }
+
+    public void setCasted(String casted) {
+        this.casted = casted;
+    }
+
+    public UserModel(String email, String password, int age, String cnic, String vote) {
         this.email = email;
         this.password = password;
         this.age = age;
         this.cnic = cnic;
+        this.vote = vote;
+        casted="false";
+    }
+
+    public String getVote() {
+        return vote;
+    }
+
+    public void setVote(String vote) {
+        this.vote = vote;
     }
 
     public String getEmail() {
@@ -37,11 +58,11 @@ public class UserModel {
         this.age = age;
     }
 
-    public long getCnic() {
+    public String getCnic() {
         return cnic;
     }
 
-    public void setCnic(long cnic) {
+    public void setCnic(String cnic) {
         this.cnic = cnic;
     }
 }

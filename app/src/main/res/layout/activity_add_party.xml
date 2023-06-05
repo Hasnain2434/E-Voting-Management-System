@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.AddParty">
+
+    <TextView
+        android:id="@+id/text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        android:text="Add Party"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name"
+        android:layout_width="355dp"
+        android:layout_height="55dp"
+        android:hint="Party Name"
+        android:outlineAmbientShadowColor="#0857A0"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="#0857A0"
+        app:boxStrokeErrorColor="#FF0000"
+        app:boxStrokeWidth="2dp"
+        app:hintTextColor="#0857A0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_id"
+        app:layout_constraintStart_toStartOf="@+id/text_view_id"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_id"
+        app:layout_constraintVertical_bias="0.116"
+        app:startIconDrawable="@drawable/baseline_email_24"
+        app:startIconTint="#0857A0"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:boxStrokeColor="#0857A0"
+            app:boxStrokeWidth="2dp"
+            tools:ignore="Deprecated" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/url"
+        android:layout_width="355dp"
+        android:layout_height="55dp"
+        android:hint="Image Url"
+        android:outlineAmbientShadowColor="#0857A0"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="#0857A0"
+        app:boxStrokeErrorColor="#FF0000"
+        app:boxStrokeWidth="2dp"
+        app:hintTextColor="#0857A0"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.099"
+        app:startIconDrawable="@drawable/baseline_image_24"
+        app:startIconTint="#0857A0"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/url1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:boxStrokeColor="#0857A0"
+            app:boxStrokeWidth="2dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="61dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:contentDescription="back"
+        android:onClick="goBack"
+        android:rotationY="180"
+        android:src="@drawable/baseline_logout_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0857A0"
+        android:contentDescription="Log In"
+        android:fontFamily="@font/droid_sans"
+        android:onClick="addParty"
+        android:pointerIcon="hand"
+        android:text="Add Party "
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_add_24"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/url"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/url"
+        app:layout_constraintTop_toBottomOf="@+id/url"
+        app:layout_constraintVertical_bias="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,8 +13,8 @@ public class AdminDatabaseConnection {
     {
         if(databaseConnection==null)
         {
-            firebaseDatabase = FirebaseDatabase.getInstance("https://evoting-4f0ab-default-rtdb.firebaseio.com/");
-            databaseReference = firebaseDatabase.getReference("Citizen");
+            firebaseDatabase = FirebaseDatabase.getInstance("https://evoting-d0a2f-default-rtdb.firebaseio.com/");
+            databaseReference = firebaseDatabase.getReference("Admin");
             databaseConnection=new AdminDatabaseConnection();
         }
         return databaseConnection;

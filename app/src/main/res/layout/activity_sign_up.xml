@@ -19,7 +19,7 @@
         app:lottie_rawRes="@raw/signup" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailSignUp"
+        android:id="@+id/emailLogIn"
         android:layout_width="355dp"
         android:layout_height="55dp"
         android:hint="Email"
@@ -42,7 +42,7 @@
         app:startIconTint="#0857A0">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailSignUp1"
+            android:id="@+id/emailLogIn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -56,7 +56,7 @@
         android:id="@+id/cnicSignUp"
         android:layout_width="355dp"
         android:layout_height="55dp"
-        android:hint="Cnic"
+        android:hint="Cnic {12345-5678909-1}"
         android:outlineAmbientShadowColor="#0857A0"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -66,11 +66,11 @@
         app:boxStrokeErrorColor="#FF0000"
         app:boxStrokeWidth="2dp"
         app:hintTextColor="#0857A0"
-        app:layout_constraintBottom_toTopOf="@+id/passwordSignUp"
-        app:layout_constraintEnd_toEndOf="@+id/emailSignUp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordLogIn"
+        app:layout_constraintEnd_toEndOf="@+id/emailLogIn"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/emailSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/emailSignUp"
+        app:layout_constraintStart_toStartOf="@+id/emailLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/emailLogIn"
         app:layout_constraintVertical_bias="0.144"
         app:startIconDrawable="@drawable/baseline_email_24"
         app:startIconTint="#0857A0"
@@ -80,7 +80,7 @@
             android:id="@+id/cnicSignUp1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:inputType="text"
             app:boxStrokeColor="#0857A0"
             app:boxStrokeWidth="2dp" />
 
@@ -102,11 +102,11 @@
         app:boxStrokeErrorColor="#FF0000"
         app:boxStrokeWidth="2dp"
         app:hintTextColor="#0857A0"
-        app:layout_constraintBottom_toTopOf="@+id/passwordSignUp"
-        app:layout_constraintEnd_toEndOf="@+id/emailSignUp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordLogIn"
+        app:layout_constraintEnd_toEndOf="@+id/emailLogIn"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/emailSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/emailSignUp"
+        app:layout_constraintStart_toStartOf="@+id/emailLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/emailLogIn"
         app:layout_constraintVertical_bias="0.4"
         app:startIconDrawable="@drawable/baseline_email_24"
         app:startIconTint="#0857A0"
@@ -123,7 +123,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordSignUp"
+        android:id="@+id/passwordLogIn"
         android:layout_width="355dp"
         android:layout_height="55dp"
         android:layout_marginTop="142dp"
@@ -137,15 +137,15 @@
         app:boxStrokeErrorColor="#FF0000"
         app:boxStrokeWidth="2dp"
         app:hintTextColor="#0857A0"
-        app:layout_constraintEnd_toEndOf="@+id/emailSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/emailLogIn"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/emailSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/emailSignUp"
+        app:layout_constraintStart_toStartOf="@+id/emailLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/emailLogIn"
         app:startIconDrawable="@drawable/baseline_key_24"
         app:startIconTint="#0857A0">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordSignUp1"
+            android:id="@+id/passwordLogIn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -171,10 +171,10 @@
         app:icon="@drawable/baseline_login_24"
         app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/passwordSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLogIn"
         app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="@+id/passwordSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/passwordSignUp"
+        app:layout_constraintStart_toStartOf="@+id/passwordLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogIn"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView

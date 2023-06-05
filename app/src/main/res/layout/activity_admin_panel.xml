@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.AdminPanel">
+
+
+    <TextView
+        android:id="@+id/text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        android:text="Dashboard"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recview"
+        android:layout_width="407dp"
+        android:layout_height="289dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_id"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/text_view_id"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_id"
+        app:layout_constraintVertical_bias="0.06"
+        tools:ignore="InvalidId" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="61dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:contentDescription="back"
+        android:onClick="logOut"
+        android:rotationY="180"
+        android:src="@drawable/baseline_power_settings_new_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/manageuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0857A0"
+        android:contentDescription="Log In"
+        android:fontFamily="@font/droid_sans"
+        android:onClick="confirmVote"
+        android:pointerIcon="hand"
+        android:text="Manage Citizens"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_supervised_user_circle_24"
+        app:iconTint="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recview"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/manageadmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0857A0"
+        android:contentDescription="Log In"
+        android:fontFamily="@font/droid_sans"
+        android:onClick="confirmVote"
+        android:pointerIcon="hand"
+        android:text="Manage Admins "
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_admin_panel_settings_24"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/manageuser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/manageuser"
+        app:layout_constraintTop_toBottomOf="@+id/manageuser"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addparty"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#0857A0"
+        android:contentDescription="Log In"
+        android:fontFamily="@font/droid_sans"
+        android:onClick="goToAddParty"
+        android:pointerIcon="hand"
+        android:text="Add Party"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_add_24"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/manageadmin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/manageadmin"
+        app:layout_constraintTop_toBottomOf="@+id/manageadmin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

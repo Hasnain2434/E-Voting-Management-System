@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CastVote">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="437dp"
+        android:layout_height="398dp"
+        android:layout_marginBottom="388dp"
+        android:src="@drawable/bg1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_id"
+        android:layout_width="281dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="28dp"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        android:text="Cast Vote"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="309dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_id"
+        app:layout_constraintStart_toStartOf="@+id/text_view_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/confirm2" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otp"
+        android:layout_width="355dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:hint="Enter the OTP"
+        android:outlineAmbientShadowColor="#0857A0"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="#0857A0"
+        app:boxStrokeErrorColor="#FF0000"
+        app:boxStrokeWidth="2dp"
+        app:hintTextColor="#0857A0"
+        app:layout_constraintEnd_toEndOf="@+id/animationView"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/animationView"
+        app:startIconDrawable="@drawable/baseline_email_24"
+        app:startIconTint="#0857A0"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:boxStrokeColor="#0857A0"
+            app:boxStrokeWidth="2dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0857A0"
+        android:contentDescription="Log In"
+        android:fontFamily="@font/droid_sans"
+        android:onClick="confirmVote"
+        android:pointerIcon="hand"
+        android:text="Cast Your Vote"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_check_24"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/animationView"
+        app:layout_constraintStart_toStartOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.891" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="56dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="#3e59a8"
+        android:contentDescription="back"
+        android:onClick="signOut"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
