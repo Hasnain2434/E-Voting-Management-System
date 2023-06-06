@@ -4,26 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
+    tools:context=".Admin.UserManager">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
-        android:layout_width="305dp"
-        android:layout_height="207dp"
-        android:layout_marginTop="48dp"
+    <TextView
+        android:id="@+id/text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        android:text="User Information"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/signup" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailLogIn"
+        android:id="@+id/Email"
         android:layout_width="355dp"
         android:layout_height="55dp"
-        android:hint="MobileNumber{+92}"
-        android:layout_marginTop="30dp"
+        android:hint="Phone Number{+92}"
         android:outlineAmbientShadowColor="#0857A0"
         app:boxCornerRadiusBottomEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -33,53 +39,55 @@
         app:boxStrokeErrorColor="#FF0000"
         app:boxStrokeWidth="2dp"
         app:hintTextColor="#0857A0"
-        app:layout_constraintEnd_toEndOf="@+id/animationView"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="@+id/animationView"
-        app:layout_constraintTop_toBottomOf="@+id/animationView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_id"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="@+id/text_view_id"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_id"
+        app:layout_constraintVertical_bias="0.067"
         app:startIconDrawable="@drawable/baseline_numbers_24"
-        tools:ignore="MissingConstraints"
-        app:startIconTint="#0857A0">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailLogIn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            app:boxStrokeColor="#0857A0"
-            app:boxStrokeWidth="2dp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/cnicSignUp"
-        android:layout_width="355dp"
-        android:layout_height="55dp"
-        android:hint="Cnic {12345-5678909-1}"
-        android:outlineAmbientShadowColor="#0857A0"
-        app:boxCornerRadiusBottomEnd="5dp"
-        app:boxCornerRadiusBottomStart="5dp"
-        app:boxCornerRadiusTopEnd="5dp"
-        app:boxCornerRadiusTopStart="5dp"
-        app:boxStrokeColor="#0857A0"
-        app:boxStrokeErrorColor="#FF0000"
-        app:boxStrokeWidth="2dp"
-        app:hintTextColor="#0857A0"
-        app:layout_constraintBottom_toTopOf="@+id/passwordLogIn"
-        app:layout_constraintEnd_toEndOf="@+id/emailLogIn"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/emailLogIn"
-        app:layout_constraintTop_toBottomOf="@+id/emailLogIn"
-        app:layout_constraintVertical_bias="0.144"
-        app:startIconDrawable="@drawable/baseline_email_24"
         app:startIconTint="#0857A0"
         tools:ignore="MissingConstraints">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Email1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:inputType="text"
+            app:boxStrokeColor="#0857A0"
+            app:boxStrokeWidth="2dp"
+            tools:ignore="Deprecated" />
 
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CNIC"
+        android:layout_width="355dp"
+        android:layout_height="55dp"
+        android:hint="CNIC"
+        android:outlineAmbientShadowColor="#0857A0"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="#0857A0"
+        app:boxStrokeErrorColor="#FF0000"
+        app:boxStrokeWidth="2dp"
+        app:hintTextColor="#0857A0"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
+        app:layout_constraintVertical_bias="0.075"
+        app:startIconDrawable="@drawable/baseline_perm_identity_24"
+        app:startIconTint="#0857A0"
+        tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/cnicSignUp1"
+            android:id="@+id/CNIC1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -88,12 +96,10 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ageSignUp"
+        android:id="@+id/Age"
         android:layout_width="355dp"
         android:layout_height="55dp"
-        android:layout_marginTop="70dp"
         android:hint="Age"
         android:outlineAmbientShadowColor="#0857A0"
         app:boxCornerRadiusBottomEnd="5dp"
@@ -104,31 +110,34 @@
         app:boxStrokeErrorColor="#FF0000"
         app:boxStrokeWidth="2dp"
         app:hintTextColor="#0857A0"
-        app:layout_constraintBottom_toTopOf="@+id/passwordLogIn"
-        app:layout_constraintEnd_toEndOf="@+id/emailLogIn"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/CNIC"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/emailLogIn"
-        app:layout_constraintTop_toBottomOf="@+id/emailLogIn"
-        app:layout_constraintVertical_bias="0.4"
-        app:startIconDrawable="@drawable/baseline_email_24"
+        app:layout_constraintStart_toStartOf="@+id/CNIC"
+        app:layout_constraintTop_toBottomOf="@+id/CNIC"
+        app:layout_constraintVertical_bias="0.093"
+        app:startIconDrawable="@drawable/baseline_numbers_24"
         app:startIconTint="#0857A0"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ageSignUp1"
+            android:id="@+id/Age1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="#0857A0"
+            android:editable="false"
             android:inputType="number"
-            app:boxStrokeWidth="2dp" />
+            app:boxStrokeColor="#0857A0"
+            app:boxStrokeWidth="2dp"
+            tools:ignore="Deprecated" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordLogIn"
+        android:id="@+id/Password"
         android:layout_width="355dp"
         android:layout_height="55dp"
-        android:layout_marginTop="142dp"
         android:hint="Password"
         android:outlineAmbientShadowColor="#0857A0"
         app:boxCornerRadiusBottomEnd="5dp"
@@ -139,59 +148,84 @@
         app:boxStrokeErrorColor="#FF0000"
         app:boxStrokeWidth="2dp"
         app:hintTextColor="#0857A0"
-        app:layout_constraintEnd_toEndOf="@+id/emailLogIn"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/emailLogIn"
-        app:layout_constraintTop_toBottomOf="@+id/emailLogIn"
-        app:startIconDrawable="@drawable/baseline_key_24"
-        app:startIconTint="#0857A0">
+
+        app:layout_constraintBottom_toTopOf="@+id/update"
+        app:layout_constraintEnd_toEndOf="@+id/Age"
+        app:layout_constraintStart_toStartOf="@+id/Age"
+        app:layout_constraintTop_toBottomOf="@+id/Age"
+        app:startIconDrawable="@drawable/baseline_password_24"
+        app:startIconTint="#0857A0"
+        tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordLogIn1"
+            android:id="@+id/Password1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:editable="false"
             android:inputType="textPassword"
             app:boxStrokeColor="#0857A0"
-            app:boxStrokeWidth="2dp" />
+            app:boxStrokeWidth="2dp"
+            tools:ignore="Deprecated" />
 
     </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="61dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:contentDescription="back"
+        android:onClick="goBackToManageUser"
+        android:rotationY="180"
+        android:src="@drawable/baseline_logout_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/signUpbtn"
+        android:id="@+id/update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
         android:backgroundTint="#0857A0"
         android:contentDescription="Log In"
         android:fontFamily="@font/droid_sans"
-        android:onClick="CitizenSignUp"
+        android:onClick="updateUser"
         android:pointerIcon="hand"
-        android:text="Sign Up"
+        android:text="Update User"
         android:textColor="@color/white"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:icon="@drawable/baseline_login_24"
+        app:icon="@drawable/baseline_update_24"
         app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/passwordLogIn"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="@+id/passwordLogIn"
-        app:layout_constraintTop_toBottomOf="@+id/passwordLogIn"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="@+id/Age"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/Age"
+        app:layout_constraintTop_toBottomOf="@+id/Age"
+        app:layout_constraintVertical_bias="0.479" />
 
-    <TextView
-        android:id="@+id/text_view_id"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:onClick="goToLogInPage"
+        android:backgroundTint="#0857A0"
+        android:contentDescription="Log In"
+        android:fontFamily="@font/droid_sans"
+        android:onClick="deleteUser"
         android:pointerIcon="hand"
-        android:text="Log In Here"
-        android:textSize="19sp"
-        android:textStyle="bold|italic"
+        android:text="Delete User "
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_delete_forever_24"
+        app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/signUpbtn"
-        app:layout_constraintStart_toStartOf="@+id/signUpbtn"
-        app:layout_constraintTop_toBottomOf="@+id/signUpbtn" />
+        app:layout_constraintEnd_toEndOf="@+id/update"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/update"
+        app:layout_constraintTop_toBottomOf="@+id/update"
+        app:layout_constraintVertical_bias="0.544" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

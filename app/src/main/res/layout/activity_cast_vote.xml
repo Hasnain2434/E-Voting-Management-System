@@ -81,7 +81,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/extended_fab"
+        android:id="@+id/cast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#0857A0"
@@ -92,6 +92,7 @@
         android:text="Cast Your Vote"
         android:textColor="@color/white"
         android:textSize="18dp"
+        android:enabled="false"
         android:textStyle="bold"
         app:icon="@drawable/baseline_check_24"
         app:iconTint="@color/white"
@@ -100,6 +101,30 @@
         app:layout_constraintStart_toStartOf="@+id/animationView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.891" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/sendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0857A0"
+        android:contentDescription="Log In"
+        android:fontFamily="@font/droid_sans"
+        android:onClick="sendOtp"
+        android:paddingStart="10dp"
+        android:pointerIcon="hand"
+        android:text="Send OTP"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_send_24"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/cast"
+        app:layout_constraintEnd_toEndOf="@+id/animationView"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/otp"
+        app:layout_constraintVertical_bias="0.227" />
 
     <ImageButton
         android:id="@+id/backButton"

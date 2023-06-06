@@ -29,8 +29,8 @@ public class AddParty extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_party);
-        t1=findViewById(R.id.name1);
-        t2=findViewById(R.id.url1);
+        t1=findViewById(R.id.Email1);
+        t2=findViewById(R.id.CNIC1);
     }
 
     public void goBack(View view) {

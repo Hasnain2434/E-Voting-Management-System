@@ -1,7 +1,6 @@
 package com.example.evoting;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -105,7 +104,7 @@ public class PartyAdapter extends RecyclerView.Adapter<PartyAdapter.ViewHolder>{
         CardView cardView;
         public ViewHolder(@NonNull View view) {
             super(view);
-            v1=view.findViewById(R.id.name);
+            v1=view.findViewById(R.id.Email);
             v2=view.findViewById(R.id.votenumber);
             img=view.findViewById(R.id.partyimage);
             cardView=view.findViewById(R.id.card);

@@ -1,7 +1,7 @@
 package com.example.evoting;
 
 public class UserModel {
-    String email;
+    String phone;
     String password;
     int age;
     String cnic;
@@ -17,8 +17,17 @@ public class UserModel {
         this.casted = casted;
     }
 
-    public UserModel(String email, String password, int age, String cnic, String vote) {
-        this.email = email;
+    public UserModel(String phone, String password, int age, String cnic, String vote, String casted) {
+        this.phone = phone;
+        this.password = password;
+        this.age = age;
+        this.cnic = cnic;
+        this.vote = vote;
+        this.casted = casted;
+    }
+
+    public UserModel(String phone, String password, int age, String cnic, String vote) {
+        this.phone = phone;
         this.password = password;
         this.age = age;
         this.cnic = cnic;
@@ -34,12 +43,12 @@ public class UserModel {
         this.vote = vote;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getPassword() {

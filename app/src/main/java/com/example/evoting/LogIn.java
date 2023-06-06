@@ -78,6 +78,7 @@ public class LogIn extends AppCompatActivity {
                             {
                                 SharedPreferences.Editor editor=sharedPreferences.edit();
                                 editor.putString("cnic",snapshot.child("cnic").getValue().toString());
+                                editor.putString("phone",snapshot.child("phone").getValue().toString());
                                 editor.commit();
 
                                 startActivity(intent);

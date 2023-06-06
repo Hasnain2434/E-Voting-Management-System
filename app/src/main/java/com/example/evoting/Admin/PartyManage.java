@@ -30,9 +30,9 @@ public class PartyManage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_party_manage);
         reference= AdminDatabaseConnection.createConnection().getFirebaseDatabase().getReference("Party");
-        t1=findViewById(R.id.name1);
-        t2=findViewById(R.id.url1);
-        t3=findViewById(R.id.votes1);
+        t1=findViewById(R.id.Email1);
+        t2=findViewById(R.id.CNIC1);
+        t3=findViewById(R.id.Age1);
     }
 
     @Override

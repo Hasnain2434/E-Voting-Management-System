@@ -48,8 +48,17 @@ public class SignUp extends AppCompatActivity {
     public void CitizenSignUp(View view) {
         Intent intent=new Intent(this, LogIn.class);
         String cnicPattern = "^\\d{5}-\\d{7}-\\d$";
+        String phoneNumberPattern = "^(\\+92|0)(3[0-9]{2}|5[0-9]{2}|6[0-9]{2}|7[0-9]{2})[0-9]{7}$";
         UserModel userModel=new UserModel(email.getText().toString(),password.getText().toString(),Integer.parseInt(age.getText().toString()),cnic.getText().toString(),"");
-        if(Integer.parseInt(age.getText().toString())<18)
+        if (email.getText().toString().length()==0||cnic.getText().toString().length()==0||age.getText().toString().length()==0||password.getText().toString().length()==0)
+        {
+            Toast.makeText(this, "Fill the required fields", Toast.LENGTH_SHORT).show();
+        }
+        else if(!email.getText().toString().matches(phoneNumberPattern))
+        {
+            Toast.makeText(this, "Mobile Number not valid", Toast.LENGTH_SHORT).show();
+        }
+        else if(Integer.parseInt(age.getText().toString())<18)
         {
             Toast.makeText(this, "You are not eligible for vote", Toast.LENGTH_SHORT).show();
         }

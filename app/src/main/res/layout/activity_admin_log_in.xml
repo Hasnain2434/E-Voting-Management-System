@@ -95,7 +95,7 @@
         android:text="Sign In as Citizen"
         android:textSize="19sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/extended_fab"
+        app:layout_constraintBottom_toTopOf="@+id/adminSignInbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +103,7 @@
         app:layout_constraintVertical_bias="0.268" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/extended_fab"
+        android:id="@+id/adminSignInbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"

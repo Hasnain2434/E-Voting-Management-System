@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.evoting.AdminDatabaseConnection;
 import com.example.evoting.AdminLogIn;
@@ -76,6 +77,7 @@ public class AdminPanel extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
         finish();
+        Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show();
     }
 
     public void goToAddParty(View view) {
@@ -83,5 +85,20 @@ public class AdminPanel extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
         finish();
+    }
+
+
+    public void goToManageCitizen(View view) {
+        Intent intent=new Intent(this,ManageUsers.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+        finish();
+    }
+
+    public void goToManageAdmin(View view) {
+//        Intent intent=new Intent(this,ManageUsers.class);
+//        startActivity(intent);
+//        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+//        finish();
     }
 }

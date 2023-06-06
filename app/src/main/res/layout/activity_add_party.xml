@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name"
+        android:id="@+id/Email"
         android:layout_width="355dp"
         android:layout_height="55dp"
         android:hint="Party Name"
@@ -48,7 +48,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name1"
+            android:id="@+id/Email1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -60,7 +60,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/url"
+        android:id="@+id/CNIC"
         android:layout_width="355dp"
         android:layout_height="55dp"
         android:hint="Image Url"
@@ -75,17 +75,17 @@
         app:hintTextColor="#0857A0"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="@+id/Email"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
         app:layout_constraintVertical_bias="0.099"
         app:startIconDrawable="@drawable/baseline_image_24"
         app:startIconTint="#0857A0"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/url1"
+            android:id="@+id/CNIC1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -126,10 +126,10 @@
         app:icon="@drawable/baseline_add_24"
         app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/url"
+        app:layout_constraintEnd_toEndOf="@+id/CNIC"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/url"
-        app:layout_constraintTop_toBottomOf="@+id/url"
+        app:layout_constraintStart_toStartOf="@+id/CNIC"
+        app:layout_constraintTop_toBottomOf="@+id/CNIC"
         app:layout_constraintVertical_bias="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
