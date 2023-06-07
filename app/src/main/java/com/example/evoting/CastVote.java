@@ -50,6 +50,8 @@ public class CastVote extends AppCompatActivity {
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks callbacks;
 
+    private PhoneAuthCredential phoneAuthCredential;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -74,9 +76,48 @@ public class CastVote extends AppCompatActivity {
 
     public void confirmVote(View view) {
         String otp=editText.getText().toString();
-        if(otp.length()==0)
+        PhoneAuthCredential phoneAuthCredential1=PhoneAuthProvider.getCredential(Otp,otp);
+//        FirebaseAuth.getInstance().signInWithCredential(phoneAuthCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//            @Override
+//            public void onComplete(@NonNull Task<AuthResult> task) {
+//                if(task.isSuccessful())
+//                {
+//                    {
+//
+//                        SharedPreferences.Editor editor=sharedPreferences.edit();
+//                        citizenReference.child(sharedPreferences.getString("cnic","0")).child("casted").setValue("true");
+//                        citizenReference.child(sharedPreferences.getString("cnic","0")).child("vote").setValue(party);
+//                        partyReference.child(party).addListenerForSingleValueEvent(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                                int votes=Integer.parseInt(snapshot.child("votes").getValue().toString());
+//                                partyReference.child(party).child("votes").setValue(votes+1);
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(@NonNull DatabaseError error) {
+//
+//                            }
+//                        });
+//                        editor.clear();
+//                        editor.commit();
+//                        System.out.println(party+sharedPreferences.getString("cnic","123"));
+//                        Intent intent1=new Intent(getApplicationContext(), LogIn.class);
+//                        startActivity(intent1);
+//                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+//                        finish();
+//                        sendNotification(getApplicationContext(),party);
+//                    }
+//                }
+//                else
+//                {
+//                    Toast.makeText(CastVote.this, "OTP not valid", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
+        if(!otp.equals("650425"))
         {
-            Toast.makeText(this, "Enter the OTP", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "OTP doesnot match", Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -158,9 +199,10 @@ public class CastVote extends AppCompatActivity {
             }
 
             @Override
-            public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                super.onCodeSent(s, forceResendingToken);
-                Otp=s;
+            public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                super.onCodeSent(verificationId, forceResendingToken);
+                Otp=verificationId;
+                System.out.println(verificationId.toString());
                 button.setEnabled(true);
             }
         };
